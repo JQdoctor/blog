@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title th:text="等待审核中"></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="../static/asserts/vendor/bootstrap/css/bootstrap.min.css" th:href="@{/asserts/vendor/bootstrap/css/bootstrap.min.css}">
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="../static/asserts/vendor/font-awesome/css/font-awesome.min.css" th:href="@{/asserts/vendor/font-awesome/css/font-awesome.min.css}">
+    <!-- Custom icon font-->
+    <link rel="stylesheet" href="../static/asserts/css/fontastic.css" th:href="@{/asserts/css/fontastic.css}">
+    <!-- Google fonts - Open Sans-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+    <!-- Fancybox-->
+    <link rel="stylesheet" href="../static/asserts/vendor/@fancyapps/fancybox/jquery.fancybox.min.css" th:href="@{/asserts/vendor/@fancyapps/fancybox/jquery.fancybox.min.css}">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="../static/asserts/css/style.default.css" id="theme-stylesheet" th:href="@{/asserts/css/style.default.css}">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="../static/asserts/css/custom.css" th:href="@{/asserts/css/custom.css}">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="">
+    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+</head>
+<body>
+<div th:replace="commons/common::header"></div>
+<h1 th:text="文章审核中" align="center"></h1>
+<div class="col-md-8">
+    <div class="form-holder">
+
+            <div class="form-group" align="center">
+                <button  id="backh" th:text="返回主页" th:onclick="javascript:window.location.href='/blogs?l='"></button>
+                <button  id="lookc" th:text="查看审核状态"></button>
+            </div>
+
+    </div>
+</div>
+<!-- Page Footer-->
+<div th:replace="commons/common::footer"></div>
+<!-- JavaScript files-->
+<script src="../static/asserts/vendor/jquery/jquery.min.js" th:src="@{/asserts/vendor/jquery/jquery.min.js}"></script>
+<script src="../static/asserts/vendor/popper.js/umd/popper.min.js" th:src="@{/asserts/vendor/popper.js/umd/popper.min.js}"> </script>
+<script src="../static/asserts/vendor/bootstrap/js/bootstrap.min.js" th:src="@{/asserts/vendor/bootstrap/js/bootstrap.min.js}"></script>
+<script src="../static/asserts/vendor/jquery.cookie/jquery.cookie.js" th:src="@{/asserts/vendor/jquery.cookie/jquery.cookie.js}"> </script>
+<script src="../static/asserts/vendor/@fancyapps/fancybox/jquery.fancybox.min.js" th:src="@{/asserts/vendor/@fancyapps/fancybox/jquery.fancybox.min.js}"></script>
+<script src="../static/asserts/js/front.js" th:src="@{/asserts/js/front.js}"></script>
+</body>
+</html>

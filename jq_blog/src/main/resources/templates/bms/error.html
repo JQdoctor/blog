@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="utf-8">
+<title th:text="#{login-title}"></title>
+<link rel="stylesheet" href="css/style.css" th:href="@{/asserts/css/login.css}">
+
+
+</head>
+
+<body>
+
+    <h1 align="center" th:text="#{login-xtitle}"></h1>
+    <br><br>
+    <h2 th:if="${not #strings.isEmpty(session.error)}">[[${session.error}]]</h2><h2 th:if="${not #strings.isEmpty(msg)}">[[${msg}]]</h2>
+    <br><br><br><br><br>
+    <div >
+
+        <button  id="backl" th:text="返回登录页面" th:onclick="javascript:window.location.href='/login?l='"></button>
+        <button  id="backh" th:text="返回主页" th:onclick="javascript:window.location.href='/index?l='"></button>
+
+    </div>
+        <div class="footer-w3l">
+            <ul  align="center"><a  class="active" th:text="#{en}" th:href="@{${#httpServletRequest.getRequestURL()}(l='en_US')}">EN</a><span></span>
+                <a  th:text="#{ch}" th:href="@{${#httpServletRequest.getRequestURL()}(l='zh_CN')}">CN</a></ul>
+		<p th:text="#{login-xtitle}"> </p>
+	</div>
+
+
+
+</body>
+</html>

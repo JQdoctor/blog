@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jq.blog.mapper.CommentMapper">
+    <insert id="insertComment">
+        INSERT INTO comment(bid,comment,time,username,email)
+        VALUES (#{bid},#{comment},#{time},#{username},#{email})
+    </insert>
+
+    <select id="getCommentsByBid" resultType="com.jq.blog.entities.Comment">
+        SELECT * FROM  comment WHERE bid=#{bid}
+    </select>
+
+    <select id="countCommentsByBid" resultType="int">
+        SELECT COUNT(*) FROM comment WHERE bid=#{bid}
+    </select>
+</mapper>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>APP</title>
+    <link rel="stylesheet"  th:href="@{/asserts/css/component.css}">
+    <link rel="stylesheet"  th:href="@{/asserts/css/admin.css}">
+    <link rel="stylesheet"  th:href="@{/asserts/css/font-awesome.min.css}">
+    <script  th:src="@{/asserts/js/JQuery2.1.4.js}"></script>
+
+    <!-- 富文本编辑器 -->
+    <script  th:src="@{/asserts/js/wang.js}"></script>
+</head>
+
+<body>
+    <div class="rbody" id="app">
+        <div class="top">
+            当前位置：后台<i class="fa fa-fw fa-angle-right"></i>文章列表
+        </div>
+        <div class="main">
+            <div class="tabList">
+                <span class="active">文章列表</span>
+
+                <div class="search_form">
+                    <form th:method="POST" th:action="@{/bloglist/search}">
+                   <div >
+                       <input type="text" placeholder="请输入标签" id="tags" name="tags" value="">
+                       <select name="audit" id="audit" >
+                            <option value="">状态</option>
+                            <option value="0">待审核</option>
+                            <option value="1">已过审</option>
+                        </select>
+                        <input type="text" placeholder="请输入标题" id="title" name="title" value="">
+                    <button type="submit">搜索</button>
+                   </div></form>
+                </div>
+            </div>
+
+            <div class="tableLists">
+                <table>
+                    <colgroup>
+                        <col width="50">
+                        <col>
+                        <col width="90">
+                        <col width="90">
+                        <col width="90">
+                        <col width="150">
+                        <col width="90">
+                        <col width="125">
+                    </colgroup>
+
+                    <tr>
+                        <th>选择</th>
+                        <th>博客名称</th>
+                        <th>博客标签</th>
+                        <th>博客作者</th>
+                        <th>审核状态</th>
+                        <th>编写时间</th>
+                        <th>点击次数</th>
+                        <th>操作</th>
+                    </tr>
+                    <br>
+
+                    <tr th:each="blog,userStat:${blogs}">
+                        <td>
+                            <label class="ios-checkbox-box-single height30px">
+                                <input type="checkbox" name="checkbox" class="ios-checkbox-single">
+                                <span class="ios-checkbox-span-single"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <a class="ios-article-title" th:href="@{'/bloglist/'+${blog.id}(l=${session.locale})}">
+                                <span><i class="fa fa-fw fa-image"></i></span>
+                                <p th:text="${blog.title}"></p>
+                            </a>
+                        </td>
+                        <td th:text="${blog.title}"></td>
+                        <td th:text="${blog.author}"></td>
+                        <td th:text="${blog.audit}==1?'已过审':'未过审'"></td>
+                        <td th:text="${#dates.format(blog.time, 'yyyy-MM-dd HH:mm')}"></td>
+                        <td th:text="${blog.hits}"></td>
+                        <td>
+                            <a href="" class="ios-edit-btn" id="delect01" th:href="@{'/bloglist/'+${blog.id}(l=${session.locale})}">编辑</a>
+                            <a  class="ios-del-btn" id="delect" th:href="@{'/bloglist/delect/'+${blog.id}}">删除</a>
+                        </td>
+                    </tr>
+
+
+                </table>
+            </div>
+            <div><p th:if="${empty}==0" align="center">暂无数据</p></div>
+        </div>
+    </div>
+    <script src="./js/common.js" th:src="@{/asserts/js/common.js}"></script>
+
+</body>
+
+</html>

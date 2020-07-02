@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title th:text="#{login-title}"></title>
+    <link rel="stylesheet"  th:href="@{/asserts/css/component.css}">
+    <link rel="stylesheet"  th:href="@{/asserts/css/admin.css}">
+    <link rel="stylesheet"  th:href="@{/asserts/css/font-awesome.min.css}">
+    <script src="./js/JQuery2.1.4.js" th:src="@{/asserts/js/JQuery2.1.4.js}"></script>
+    <script src="./js/common.js" th:src="@{/asserts/js/common.js}"></script>
+    <!-- 有需要静态页面代写 或者 设计网站页面的 加 QQ：951252660 -->
+    <!--  换肤背景色 https://webgradients.com/ -->
+</head>
+
+<body>
+    <div class="admin">
+        <div class="top">
+            <div class="left">
+                BlogBMS
+            </div>
+            <div class="right">
+                <a  th:href="@{/index.html(l=${session.locale})}">
+                    <i class="fa fa-home"></i>
+                    <span>前台主页</span>
+                </a>
+
+                <a href="">
+                    <i class="fa fa-highlighter"></i>
+                    <span>清除缓存</span>
+                </a>
+                <a>[[${session.user.username}]]</a>
+                <span class="avatar">
+                    <img src="" alt="">
+                </span>
+                <a th:href="@{/logout}">
+                    <i class="fa fa-fw fa-power-off"></i>
+                    <span>退出后台</span>
+                </a>
+            </div>
+        </div>
+        <div class="body">
+            <div class="left">
+                <div class="menu">
+                    <div class="title">
+                            <i class="fa fa-fw fa-home"></i> 站点仪表
+                    </div>
+                </div>
+                <!-- 分割线 -->
+                <div class="menu">
+                    <div class="title">
+                            <i class="fa fa-fw fa-navicon"></i>文章管理<i class="fa fa-fw fa-angle-right"></i>
+                    </div>
+
+                    <ul class="downmenu">
+                        <li><a th:href="@{/bloglist}" target="rightiframe">文章列表</a></li>
+                        <li><a href="" target="rightiframe">创建新主题</a></li>
+                    </ul>
+                </div>
+                <!-- 分割线 -->
+                <div class="menu">
+                    <div class="title">
+                        <i class="fa fa-fw fa-user"></i> 用户管理 <i class="fa fa-fw fa-angle-right"></i>
+                    </div>
+                    <ul class="downmenu">
+                        <li><a href="" target="rightiframe">用户列表</a></li>
+                        <li><a href="" target="rightiframe">管理员列表</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 分割线 -->
+            <div class="right">
+                <iframe src="" frameborder="0" id="rightiframe" name="rightiframe"></iframe>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="utf-8">
+<title th:text="#{login-title}"></title>
+<link rel="stylesheet" href="css/style.css" th:href="@{/asserts/css/login.css}">
+
+
+</head>
+<script  th:src="@{/asserts/js/JQuery2.1.4.js}"></script>
+<script  th:src="@{/asserts/js/forget.js}"></script>
+<body>
+    <div><a th:text="#{gtfd}" th:href="@{/index.html(l=${session.locale})}"></a></div>
+    <h1 align="center" th:text="#{login-xtitle}"></h1>
+    <div class="content">
+        <div class="form sign-in">
+            <h2 th:text="#{login-welcome}"></h2>
+            <form th:method="POST" th:action="@{/login}">
+            <label >
+                <span th:text="#{login-username}"></span>
+                <input type="text" id="username" name="username" />
+            </label>
+            <label >
+                <span th:text="#{login-password}"></span>
+                <input type="password" id="password" name="password"/>
+            </label>
+            <p class="forgot-pass"><a href="javascript:" th:text="#{login-forget}" id="forget" name="forget"></a></p>
+            <button type="submit" class="submit" th:text="#{login}"></button></form>
+        </div>
+        <div class="sub-cont">
+            <div class="img">
+                <div class="img__text m--up">
+                    <h2 th:text="#{register-q}"></h2>
+                    <p th:text="#{register-a}"></p>
+                </div>
+                <div class="img__text m--in">
+                    <h2 th:text="#{login-q}"></h2>
+                    <p th:text="#{login-a}"></p>
+                </div>
+                <div class="img__btn">
+                    <span class="m--up" th:text="#{register}"></span>
+                    <span class="m--in" th:text="#{login}"></span>
+                </div>
+            </div>
+            <div class="form sign-up">
+                <h2 th:text="#{register-w}"></h2>
+                <form th:method="GET" th:action="@{/register}">
+                <label >
+                    <span th:text="#{login-username}"></span>
+                    <input type="text" id="rusername" name="rusername"/>
+                </label>
+                <label >
+                    <span th:text="#{login-email}"></span>
+                    <input type="email" id="email" name="email"/>
+                </label>
+                <label >
+                    <span th:text="#{login-password}"></span>
+                    <input type="password"  id="rpassword" name="rpassword" />
+                </label>
+                <label >
+                    <span th:text="#{confirm-p}"></span>
+                    <input type="password"  id="rpassword2" name="rpassword2" onclick="validate()"/>
+                    <span id="tishi"></span>
+                    </input>
+                </label>
+                <button type="submit" class="submit" id="submit" th:text="#{register}"></button></form>
+            </div>
+
+        </div>
+
+    </div>
+        <div class="footer-w3l">
+            <ul  align="center"><a  class="active" th:text="#{en}" th:href="@{${#httpServletRequest.getRequestURL()}(l='en_US')}">EN</a><span></span>
+                <a  th:text="#{ch}" th:href="@{${#httpServletRequest.getRequestURL()}(l='zh_CN')}">CN</a></ul>
+		<p th:text="#{login-xtitle}"> </p>
+	</div>
+
+
+
+</body>
+<script src="js/script.js" th:src="@{/asserts/js/script.js}"></script>
+</html>

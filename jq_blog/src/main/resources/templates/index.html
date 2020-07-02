@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title th:text="#{title}">Bootstrap Blog - B4 Template by Bootstrap Temple</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="../static/asserts/vendor/bootstrap/css/bootstrap.min.css" th:href="@{/asserts/vendor/bootstrap/css/bootstrap.min.css}">
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="../static/asserts/vendor/font-awesome/css/font-awesome.min.css" th:href="@{/asserts/vendor/font-awesome/css/font-awesome.min.css}">
+    <!-- Custom icon font-->
+    <link rel="stylesheet" href="../static/asserts/css/fontastic.css" th:href="@{/asserts/css/fontastic.css}">
+    <!-- Google fonts - Open Sans-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" >
+    <!-- Fancybox-->
+    <link rel="stylesheet" href="../static/asserts/vendor/@fancyapps/fancybox/jquery.fancybox.min.css" th:href="@{/asserts/vendor/@fancyapps/fancybox/jquery.fancybox.min.css}">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="../static/asserts/css/style.default.css" id="theme-stylesheet" th:href="@{/asserts/css/style.default.css}">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="../static/asserts/css/custom.css" th:href="@{/asserts/css/custom.css}">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="" >
+    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+  </head>
+  <body>
+    <div th:replace="commons/common::header"></div>
+    <!-- Hero Section-->
+    <section style="background: url(../static/asserts/img/hero.jpg); background-size: cover; background-position: center center" class="hero" th:style="'background: url('+@{/asserts/img/hero.jpg}+'); background-size: cover; background-position: center center'" >
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-7">
+            <h1>Bootstrap 4 Blog - A free template by Bootstrap Temple</h1><a href="#" class="hero-link">Discover More</a>
+          </div>
+        </div><a href=".intro" class="continue link-scroll"><i class="fa fa-long-arrow-down"></i> Scroll Down</a>
+      </div>
+    </section>
+    <!-- Intro Section-->
+    <section class="intro">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <h2 class="h3" th:text="#{profile}"></h2>
+            <p class="text-big" th:text="#{profiles}">Place a nice <strong >introduction</strong> here <strong>to catch reader's attention</strong>. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderi.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="featured-posts no-padding-top">
+      <div class="container">
+        <!-- Post-->
+        <div class="row d-flex align-items-stretch">
+          <div class="text col-lg-7">
+            <div class="text-inner d-flex align-items-center">
+              <div class="content">
+                <header class="post-header">
+                  <div class="category"><a href="#">Business</a><a href="#">Technology</a></div><a href="post.html">
+                    <h2 class="h4">Alberto Savoia Can Teach You About Interior</h2></a>
+                </header>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrude consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+                <footer class="post-footer d-flex align-items-center"><a href="#" class="author d-flex align-items-center flex-wrap">
+                    <div class="avatar"><img src="../static/asserts/img/avatar-1.jpg" alt="..." class="img-fluid" th:src="@{/asserts/img/avatar-1.jpg}"></div>
+                    <div class="title"><span>John Doe</span></div></a>
+                  <div class="date"><i class="icon-clock"></i> 2 months ago</div>
+                  <div class="comments"><i class="icon-comment"></i>12</div>
+                </footer>
+              </div>
+            </div>
+          </div>
+          <div class="image col-lg-5"><img src="../static/asserts/img/featured-pic-1.jpeg" alt="..." th:src="@{/asserts/img/featured-pic-1.jpeg}"></div>
+        </div>
+        <!-- Post        -->
+        <div class="row d-flex align-items-stretch">
+          <div class="image col-lg-5"><img src="../static/asserts/img/featured-pic-2.jpeg" alt="..." th:src="@{/asserts/img/featured-pic-2.jpeg}"></div>
+          <div class="text col-lg-7">
+            <div class="text-inner d-flex align-items-center">
+              <div class="content">
+                <header class="post-header">
+                  <div class="category"><a href="#">Business</a><a href="#">Technology</a></div><a href="post.html">
+                    <h2 class="h4">Alberto Savoia Can Teach You About Interior</h2></a>
+                </header>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrude consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+                <footer class="post-footer d-flex align-items-center"><a href="#" class="author d-flex align-items-center flex-wrap">
+                    <div class="avatar"><img src="../static/asserts/img/avatar-2.jpg" alt="..." class="img-fluid" th:src="@{/asserts/img/avatar-2.jpg}"></div>
+                    <div class="title"><span>John Doe</span></div></a>
+                  <div class="date"><i class="icon-clock"></i> 2 months ago</div>
+                  <div class="comments"><i class="icon-comment"></i>12</div>
+                </footer>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Post                            -->
+        <div class="row d-flex align-items-stretch">
+          <div class="text col-lg-7">
+            <div class="text-inner d-flex align-items-center">
+              <div class="content">
+                <header class="post-header">
+                  <div class="category"><a href="#">Business</a><a href="#">Technology</a></div><a href="post.html">
+                    <h2 class="h4">Alberto Savoia Can Teach You About Interior</h2></a>
+                </header>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrude consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+                <footer class="post-footer d-flex align-items-center"><a href="#" class="author d-flex align-items-center flex-wrap">
+                    <div class="avatar"><img src="../static/asserts/img/avatar-3.jpg" alt="..." class="img-fluid" th:src="@{/asserts/img/avatar-3.jpg}"></div>
+                    <div class="title"><span>John Doe</span></div></a>
+                  <div class="date"><i class="icon-clock"></i> 2 months ago</div>
+                  <div class="comments"><i class="icon-comment"></i>12</div>
+                </footer>
+              </div>
+            </div>
+          </div>
+          <div class="image col-lg-5"><img src="../static/asserts/img/featured-pic-3.jpeg" alt="..." th:src="@{/asserts/img/featured-pic-3.jpeg}"></div>
+        </div>
+      </div>
+    </section>
+    <div class="tlinks">Collect from <a href="http://www.cssmoban.com/"  title="网站模板">网站模板</a></div>
+    <!-- Divider Section-->
+    <section style="background: url(../static/asserts/img/divider-bg.jpg); background-size: cover; background-position: center bottom" class="divider" th:style="'background: url('+@{/asserts/img/divider-bg.jpg}+'); background-size: cover; background-position: center bottom'">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7">
+            <h2></h2><a href="#" class="hero-link">View More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Latest Posts -->
+    <section class="latest-posts"> 
+      <div class="container">
+        <header> 
+          <h2 th:text="#{Lpost}"></h2>
+          <p class="text-big" th:text="#{lpostw}"></p>
+        </header>
+        <div class="row" >
+            <div class="post col-md-4" th:each="blog,userStat:${newBlogs}">
+              <div class="post-thumbnail"><a  th:href="@{'/blog/'+${blog.id}}"><img src="../static/asserts/img/blog-1.jpg" alt="..." class="img-fluid" th:src="@{/asserts/img/blog-1.jpg}"></a></div>
+              <div class="post-details">
+                <div class="post-meta d-flex justify-content-between">
+                  <div class="date" th:text="${#dates.format(blog.time, 'yyyy-MM-dd HH:mm')}"></div>
+                  <div class="category"><a th:href="@{'/search/'+${blog.tags}(l=${session.locale})}" th:text="${blog.tags}"></a></div>
+                </div><a th:href="@{'/blog/'+${blog.id}}">
+                <h3 class="h4" th:text="${blog.title}"></h3></a>
+                <p class="text-muted" th:text="#{click}"></p>
+              </div>
+            </div>
+        </div>
+      </div>
+    </section>
+    <!-- Newsletter Section-->
+    <section class="newsletter no-padding-top">    
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h2 th:text="#{stbu}"></h2>
+            <p class="text-big" th:text="#{stbuw}"></p>
+          </div>
+          <div class="col-md-8">
+            <div class="form-holder">
+              <form  th:method="POST" th:action="@{/mail}">
+                <div class="form-group">
+                  <input type="email" name="email" id="email"  th:placeholder="#{placeholder}">
+                  <button type="submit" class="submit" th:text="#{subscribe}">Subscribe</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Gallery Section-->
+    <section class="gallery no-padding">    
+      <div class="row">
+        <div class="mix col-lg-3 col-md-3 col-sm-6">
+          <div class="item"><a href="../static/asserts/img/gallery-1.jpg" data-fancybox="gallery" class="image" th:href="@{/asserts/img/gallery-1.jpg}" th:class="image">
+            <img src="../static/asserts/img/gallery-1.jpg" alt="..." class="img-fluid" th:src="@{/asserts/img/gallery-1.jpg}">
+              <div class="overlay d-flex align-items-center justify-content-center"><i class="icon-search"></i></div></a></div>
+        </div>
+        <div class="mix col-lg-3 col-md-3 col-sm-6">
+          <div class="item"><a href="../static/asserts/img/gallery-2.jpg" data-fancybox="gallery" class="image" th:href="@{/asserts/img/gallery-2.jpg}" th:class="image">
+            <img src="../static/asserts/img/gallery-2.jpg" alt="..." class="img-fluid" th:src="@{/asserts/img/gallery-2.jpg}">
+              <div class="overlay d-flex align-items-center justify-content-center"><i class="icon-search"></i></div></a></div>
+        </div>
+        <div class="mix col-lg-3 col-md-3 col-sm-6">
+          <div class="item"><a href="../static/asserts/img/gallery-3.jpg" data-fancybox="gallery" class="image" th:href="@{/asserts/img/gallery-3.jpg}" th:class="image">
+            <img src="../static/asserts/img/gallery-3.jpg" alt="..." class="img-fluid" th:src="@{/asserts/img/gallery-3.jpg}">
+              <div class="overlay d-flex align-items-center justify-content-center"><i class="icon-search"></i></div></a></div>
+        </div>
+        <div class="mix col-lg-3 col-md-3 col-sm-6">
+          <div class="item"><a href="../static/asserts/img/gallery-4.jpg" data-fancybox="gallery" class="image" th:href="@{/asserts/img/gallery-4.jpg}" th:class="image">
+            <img src="../static/asserts/img/gallery-4.jpg" alt="..." class="img-fluid" th:src="@{/asserts/img/gallery-4.jpg}">
+              <div class="overlay d-flex align-items-center justify-content-center"><i class="icon-search"></i></div></a></div>
+        </div>
+      </div>
+    </section>
+    <!-- Page Footer-->
+    <div th:replace="commons/common::footer"></div>
+    <!-- JavaScript files-->
+    <script src="../static/asserts/vendor/jquery/jquery.min.js" th:src="@{/asserts/vendor/jquery/jquery.min.js}"></script>
+    <script src="../static/asserts/vendor/popper.js/umd/popper.min.js" th:src="@{/asserts/vendor/popper.js/umd/popper.min.js}"> </script>
+    <script src="../static/asserts/vendor/bootstrap/js/bootstrap.min.js" th:src="@{/asserts/vendor/bootstrap/js/bootstrap.min.js}"></script>
+    <script src="../static/asserts/vendor/jquery.cookie/jquery.cookie.js" th:src="@{/asserts/vendor/jquery.cookie/jquery.cookie.js}"> </script>
+    <script src="../static/asserts/vendor/@fancyapps/fancybox/jquery.fancybox.min.js" th:src="@{/asserts/vendor/@fancyapps/fancybox/jquery.fancybox.min.js}"></script>
+    <script src="../static/asserts/js/front.js" th:src="@{/asserts/js/front.js}"></script>
+  </body>
+</html>

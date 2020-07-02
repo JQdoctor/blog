@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title th:text="#{title}">Bootstrap Blog - B4 Template by Bootstrap Temple</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="../static/asserts/vendor/bootstrap/css/bootstrap.min.css" th:href="@{/asserts/vendor/bootstrap/css/bootstrap.min.css}">
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="../static/asserts/vendor/font-awesome/css/font-awesome.min.css" th:href="@{/asserts/vendor/font-awesome/css/font-awesome.min.css}">
+    <!-- Custom icon font-->
+    <link rel="stylesheet" href="../static/asserts/css/fontastic.css" th:href="@{/asserts/css/fontastic.css}">
+    <!-- Google fonts - Open Sans-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+    <!-- Fancybox-->
+    <link rel="stylesheet" href="../static/asserts/vendor/@fancyapps/fancybox/jquery.fancybox.min.css" th:href="@{/asserts/vendor/@fancyapps/fancybox/jquery.fancybox.min.css}">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="../static/asserts/css/style.default.css" id="theme-stylesheet" th:href="@{/asserts/css/style.default.css}">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="../static/asserts/css/custom.css" th:href="@{/asserts/css/custom.css}">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="">
+    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+</head>
+<body>
+<div th:replace="commons/common::header"></div>
+<div class="add-comment">
+    <header>
+        <h1 class="h6" th:text="#{blog}"></h1>
+    </header>
+    <form action="#" class="commenting-form"  th:method="POST" th:action="@{/blog}">
+        <div class="row">
+            <div class="form-group col-md-6">
+                <input type="text" name="title" id="title"  class="form-control" th:placeholder="#{ptitle}">
+            </div>
+            <div class="form-group col-md-6">
+                <input type="text" name="author" id="author" th:placeholder="#{author}" class="form-control">
+            </div>
+            <div class="form-group col-md-12">
+                <textarea name="p1" id="p1" th:placeholder="#{content1}" class="form-control"></textarea>
+            </div>
+            <div class="form-group col-md-6">
+                <input type="text" name="stitle" id="stitle"  class="form-control" th:placeholder="#{stitle}">
+            </div>
+            <div class="form-group col-md-12">
+                <textarea name="p2" id="p2" th:placeholder="#{content2}" class="form-control"></textarea>
+            </div>
+            <div class="form-group col-md-12">
+                <textarea name="p3" id="p3" th:placeholder="#{content3}" class="form-control"></textarea>
+            </div>
+            <div class="form-group col-md-6">
+                <input type="text" name="tags" id="tags"  class="form-control" th:placeholder="#{tags}">
+            </div>
+            <div class="form-group col-md-12">
+                <button type="submit" class="btn btn-secondary" th:text="#{postb}"></button>
+            </div>
+        </div>
+    </form>
+</div>
+<!-- Page Footer-->
+<div th:replace="commons/common::footer"></div>
+<!-- JavaScript files-->
+<script src="../static/asserts/vendor/jquery/jquery.min.js" th:src="@{/asserts/vendor/jquery/jquery.min.js}"></script>
+<script src="../static/asserts/vendor/popper.js/umd/popper.min.js" th:src="@{/asserts/vendor/popper.js/umd/popper.min.js}"> </script>
+<script src="../static/asserts/vendor/bootstrap/js/bootstrap.min.js" th:src="@{/asserts/vendor/bootstrap/js/bootstrap.min.js}"></script>
+<script src="../static/asserts/vendor/jquery.cookie/jquery.cookie.js" th:src="@{/asserts/vendor/jquery.cookie/jquery.cookie.js}"> </script>
+<script src="../static/asserts/vendor/@fancyapps/fancybox/jquery.fancybox.min.js" th:src="@{/asserts/vendor/@fancyapps/fancybox/jquery.fancybox.min.js}"></script>
+<script src="../static/asserts/js/front.js" th:src="@{/asserts/js/front.js}"></script>
+</body>
+</html>
