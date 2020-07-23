@@ -26,5 +26,5 @@ public interface UserMapper {
 
     public String selectLevelnameByLid(@Param("lid")Integer lid);
 
-    public String changeUserLid(@Param("lid")Integer lid,@Param("id")Integer id);
+    public String updateUserLid(@Param("lid")Integer lid,@Param("id")Integer id);
 }

@@ -4,10 +4,10 @@ import com.jq.blog.entities.Blog;
 import com.jq.blog.entities.Comment;
 import com.jq.blog.entities.Contact;
 import com.jq.blog.entities.Mail;
-import com.jq.blog.mapper.BlogMapper;
-import com.jq.blog.mapper.CommentMapper;
-import com.jq.blog.mapper.ContactMapper;
-import com.jq.blog.mapper.MailMapper;
+import com.jq.blog.service.BlogService;
+import com.jq.blog.service.CommentService;
+import com.jq.blog.service.ContactService;
+import com.jq.blog.service.MailService;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;
@@ -35,19 +35,19 @@ import java.util.Date;
 @Controller
 public class BlogController {
     @Autowired
-    BlogMapper blogMapper;
+    BlogService blogMapper;
 
     @Autowired
     JavaMailSenderImpl mailSender;
 
     @Autowired
-    CommentMapper commentMapper;
+    CommentService commentMapper;
 
     @Autowired
-    MailMapper mailMapper;
+    MailService mailMapper;
 
     @Autowired
-    ContactMapper contactMapper;
+    ContactService contactMapper;
 
     @RequestMapping({"","index","index.html"})
     public String index(Model model, HttpSession session){

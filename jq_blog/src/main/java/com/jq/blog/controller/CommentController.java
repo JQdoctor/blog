@@ -1,7 +1,7 @@
 package com.jq.blog.controller;
 
 import com.jq.blog.entities.Comment;
-import com.jq.blog.mapper.CommentMapper;
+import com.jq.blog.service.CommentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,7 +16,7 @@ import java.util.Date;
 @Controller
 public class CommentController {
     @Autowired
-    CommentMapper commentMapper;
+    CommentService commentMapper;
 
     @PostMapping("/comment")
     public String insertComment(Comment comment) throws ParseException {

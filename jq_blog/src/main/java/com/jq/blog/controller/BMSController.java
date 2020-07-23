@@ -3,9 +3,9 @@ package com.jq.blog.controller;
 import com.jq.blog.entities.Blog;
 import com.jq.blog.entities.Comment;
 import com.jq.blog.entities.User;
-import com.jq.blog.mapper.BlogMapper;
-import com.jq.blog.mapper.CommentMapper;
-import com.jq.blog.mapper.UserMapper;
+import com.jq.blog.service.BlogService;
+import com.jq.blog.service.CommentService;
+import com.jq.blog.service.UserService;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -25,11 +25,11 @@ import java.util.Collection;
 @Controller
 public class BMSController {
     @Autowired
-    UserMapper userMapper;
+    UserService userMapper;
     @Autowired
-    BlogMapper blogMapper;
+    BlogService blogMapper;
     @Autowired
-    CommentMapper commentMapper;
+    CommentService commentMapper;
 
     @GetMapping({"/login.html","/login"})
     public String returnLogin(HttpServletRequest request){
@@ -108,7 +108,7 @@ public class BMSController {
 
     @PostMapping("/users/change")
     public String changeUserLid(Model model,Integer id,Integer lid){
-        userMapper.changeUserLid(id,lid);
+        userMapper.updateUserLid(id,lid);
         return "";
     }
 
